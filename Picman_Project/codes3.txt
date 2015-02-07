@@ -1,0 +1,6 @@
+codes2
+added text class, and function to draw text anywhere
+added position, keys, handling, with acceleration
+
+codes3
+made maze: in a different class.

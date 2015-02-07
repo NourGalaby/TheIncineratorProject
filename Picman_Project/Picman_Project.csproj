@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BD39FC5-6DC3-4BA0-BA1E-192E05FCDC26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Picman_Project</RootNamespace>
+    <AssemblyName>Picman_Project</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Nour\Desktop\WebSite\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\server\Picman_Project\</InstallUrl>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Windows\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Windows\Release\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>ED39E4E6E249CD3BE0C366C52E4F60BB70C40826</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Picman_Project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="game\gifts\ammo.cs" />
+    <Compile Include="game\gifts\gift_factory.cs" />
+    <Compile Include="game\gifts\health.cs" />
+    <Compile Include="game\gifts\points.cs" />
+    <Compile Include="game\gifts\shotgunAmmo.cs" />
+    <Compile Include="game\gifts\sniper_ammo.cs" />
+    <Compile Include="game\gifts\speed.cs" />
+    <Compile Include="game\guns\Flamethrower.cs" />
+    <Compile Include="game\monsters\Abstractmonster.cs" />
+    <Compile Include="game\monsters\demon.cs" />
+    <Compile Include="game\monsters\MonstersPool.cs" />
+    <Compile Include="game\sounds\myeffects.cs" />
+    <Compile Include="graphics\BloodParticles\BloodParticle.cs" />
+    <Compile Include="graphics\BloodParticles\BloodEngine.cs" />
+    <Compile Include="graphics\FlameParticles\Particle.cs" />
+    <Compile Include="graphics\FlameParticles\ParticleEngine.cs" />
+    <Compile Include="game\guns\gun.cs" />
+    <Compile Include="game\guns\guns_pool.cs" />
+    <Compile Include="game\guns\Shotgun.cs" />
+    <Compile Include="graphics\Animatedsprites.cs" />
+    <Compile Include="graphics\Camera.cs" />
+    <Compile Include="game\debug.cs" />
+    <Compile Include="graphics\multiAnimatedSprite.cs" />
+    <Compile Include="game\guns\Sniper.cs" />
+    <Compile Include="ScreenManger\GameScreen.cs" />
+    <Compile Include="ScreenManger\GlobalMenu.cs" />
+    <Compile Include="ScreenManger\InputState.cs" />
+    <Compile Include="ScreenManger\ScreenManager.cs" />
+    <Compile Include="tiles\block_tile.cs" />
+    <Compile Include="tiles\bound_tile.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="game\gifts\gift.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Maze\Maze_creator.cs" />
+    <Compile Include="Maze\Mazebuilder.cs" />
+    <Compile Include="tiles\ice_tile.cs" />
+    <Compile Include="tiles\pass_tile.cs" />
+    <Compile Include="player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="graphics\text_sprite.cs" />
+    <Compile Include="tiles\tile.cs" />
+    <Compile Include="wall_tile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MSBuildExtensionsPath)\..\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Picman_con\Picman_con\Picman_con.csproj">
+      <Project>{02ec9a17-b894-4bfc-948a-b06923064854}</Project>
+      <Name>Picman_con</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\" />
+    <Folder Include="screens\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Picman_Project_TemporaryKey.pfx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
