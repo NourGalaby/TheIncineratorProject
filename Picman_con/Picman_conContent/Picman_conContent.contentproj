@@ -308,13 +308,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Music\Full On.wav">
-      <Name>Full On</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Full Onmp3.mp3">
       <Name>Full Onmp3</Name>
       <Importer>Mp3Importer</Importer>
